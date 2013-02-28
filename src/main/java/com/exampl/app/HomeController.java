@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Handles requests for the application home page.
+ * MessageSource を読み込むクラス
  */
 @Controller
 public class HomeController {
@@ -25,7 +25,7 @@ public class HomeController {
     private MessageSource messageSource;
 
     /**
-     * Simply selects the home view to render by returning its name.
+     * message_xx.properties を読み込むメソッドです。
      */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home(Locale locale, Model model) {
